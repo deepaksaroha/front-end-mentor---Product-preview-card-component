@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap");
+      .f1w1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .f1w2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .f2w1 {
+        font-family: "Fraunces", sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+      }
+      p,
+      h1 {
+        margin: 0;
+      }
+      .border{
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .image1{
+        display: block;
+      }
+      .image2{
+        display: none;
+      }
+      .container{
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        width: 600px;
+      }      
+      @media only screen and (max-width: 375px) {
+        .image1{
+          display: none;
+        }
+        .image2{
+          display: block;
+        }
+        .container{
+          display: flex; 
+          flex-direction:column;
+          width: 350px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preview Gabrielle Essence Eau De Parfum A floral, solar and voluptuous
+    interpretation composed by Olivier Polge, Perfumer-Creator for the House of
+    CHANEL. $149.99 $169.99 Add to Cart
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <!--ui code-->
+    <div
+      style="
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: hsl(30, 38%, 92%);
+      "
+    >
+      <div class="border container">
+        <div>
+          <img
+            class="image1"
+            style="max-width: 100%;"
+            src="./images/image-product-desktop.jpg"
+            alt=""
+          />
+          <img
+            class="image2"
+            style="max-width: 100%; aspect-ratio: unset"
+            src="./images/image-product-mobile.jpg"
+            alt=""
+          />
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+            background:hsl(0, 0%, 100%);
+            gap: 20px;
+          "
+        >
+          <label class="f1w1"> PERFUME </label>
+          <h1 class="f2w1">Gabrielle Essence Eau De Parfum</h1>
+          <p class="f1w1">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <p class="f2w1" style="color: hsl(158, 36%, 37%)">$149.99</p>
+            <p class="f1w1">
+              <s> $169.99</s>
+            </p>
+          </div>
+          <button
+            class="f1w2"
+            style="
+              color: white;
+              display: flex;
+              justify-content: center;
+              gap: 5px;
+              padding: 1em;
+              border: none;
+              border-radius: 10px;
+              background: hsl(158, 36%, 37%);
+            "
+          >
+            <img src="./images/icon-cart.svg" alt="" />
+            <p>Add to Cart</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
